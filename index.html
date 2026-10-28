@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Bio Card | Workshop Web Dev 2026</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet Utama -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MAIN CONTAINER (Bungkus Utama Proyek) -->
+  <main class="page-container">
+
+    <!-- PROFILE CARD -->
+    <!-- PETUNJUK: Elemen ini akan kita beri styling Box Model & Flexbox -->
+    <article class="profile-card">
+      
+      <!-- 1. Header Card (Foto & Status) -->
+      <header class="card-header">
+        <div class="avatar-wrapper">
+          <!-- TODO 1: Ganti foto dengan foto/avatar kalian sendiri di folder assets/images/ -->
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
+               alt="Foto Profil" 
+               class="avatar-img">
+          <span class="status-badge" title="Tersedia untuk kolaborasi"></span>
+        </div>
+
+        <!-- TODO 2: Ganti Nama dan Jurusan/Angkatan kalian -->
+        <h1 class="profile-name">Nama Mahasiswa</h1>
+        <p class="profile-title">Mahasiswa Teknik Informatika '26</p>
+      </header>
+
+      <!-- 2. Bio Singkat -->
+      <!-- TODO 3: Tuliskan 1-2 kalimat bio tentang ketertarikan atau passion coding kalian -->
+      <p class="profile-bio">
+        Exploring modern web development & AI engineering. Sedang antusias belajar HTML Semantik, CSS Modern, dan membangun sistem yang rapi.
+      </p>
+
+      <!-- 3. Skill Tags / Chips -->
+      <!-- Menggunakan Flexbox wrap untuk menata deretan badges -->
+      <div class="skills-wrapper">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS Modern</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">AI Prompting</span>
+      </div>
+
+      <!-- 4. Interactive Links (Tautan Portofolio / Medsos) -->
+      <!-- TODO 4: Masukkan URL profil GitHub, LinkedIn, atau Instagram kalian di atribut href -->
+      <nav class="links-nav" aria-label="Tautan Sosial Media">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <span class="link-icon">📁</span>
+          <span class="link-text">GitHub Portfolio</span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <span class="link-icon">💼</span>
+          <span class="link-text">LinkedIn Profile</span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <span class="link-icon">📸</span>
+          <span class="link-text">Instagram</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </nav>
+
+      <!-- 5. Card Footer -->
+      <footer class="card-footer">
+        <p class="footer-credit">Built with ❤️ on Workshop Web Dev</p>
+      </footer>
+
+    </article>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
