@@ -1,0 +1,10 @@
+1. Perlu form registrasi yang menyimpan data pendaftar
+2. Form terdiri dari :
+    Nama  :
+    NIM :
+    Kelas :
+    Angkatan :
+    No. HP :
+    Motivasi Ikut acara :
+3. Bisa diakses secara responsif (Multi device)
+4. Setelah di input, bisa ditampilkan outputnya

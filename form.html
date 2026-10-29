@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Form registrasi acara Workshop Coding UAB."
+    />
+    <title>Registrasi Workshop Coding UAB</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body class="registration-page">
+    <main class="registration-container">
+      <section class="registration-card" aria-labelledby="registration-title">
+        <header class="registration-header">
+          <p class="registration-eyebrow">WORKSHOP CODING UAB</p>
+          <h1 id="registration-title">Daftar sekarang</h1>
+          <p class="registration-intro">
+            Lengkapi data diri berikut untuk bergabung di acara workshop.
+            Semua kolom wajib diisi.
+          </p>
+        </header>
+
+        <form id="form-pendaftaran" class="registration-form">
+          <div class="registration-fields">
+            <div class="form-field">
+              <label for="nama">Nama lengkap</label>
+              <input
+                id="nama"
+                name="nama"
+                type="text"
+                autocomplete="name"
+                placeholder="Contoh: Nadia Putri"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="nim">NIM</label>
+              <input
+                id="nim"
+                name="nim"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="Masukkan NIM"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="kelas">Kelas</label>
+              <input
+                id="kelas"
+                name="kelas"
+                type="text"
+                placeholder="Contoh: TI-2A"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="angkatan">Angkatan</label>
+              <input
+                id="angkatan"
+                name="angkatan"
+                type="text"
+                inputmode="numeric"
+                placeholder="Contoh: 2024"
+                required
+              />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="no_hp">Nomor HP</label>
+              <input
+                id="no_hp"
+                name="no_hp"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                placeholder="Contoh: 081234567890"
+                required
+              />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="motivasi">Motivasi mengikuti acara</label>
+              <textarea
+                id="motivasi"
+                name="motivasi"
+                rows="4"
+                placeholder="Ceritakan hal yang ingin kamu pelajari..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="registration-submit" type="submit">
+            Kirim pendaftaran
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <p class="registration-note">
+            Periksa kembali data sebelum mengirim pendaftaran.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <dialog
+      id="registration-result"
+      class="registration-dialog"
+      aria-labelledby="result-title"
+    >
+      <div class="dialog-content">
+        <div class="result-icon" aria-hidden="true">&check;</div>
+        <p class="registration-eyebrow">PENDAFTARAN TERCATAT</p>
+        <h2 id="result-title">Terima kasih sudah mendaftar!</h2>
+        <p class="result-intro">
+          Berikut ringkasan data yang kamu kirim:
+        </p>
+        <dl class="result-details">
+          <div>
+            <dt>Nama lengkap</dt>
+            <dd data-result="nama"></dd>
+          </div>
+          <div>
+            <dt>NIM</dt>
+            <dd data-result="nim"></dd>
+          </div>
+          <div>
+            <dt>Kelas</dt>
+            <dd data-result="kelas"></dd>
+          </div>
+          <div>
+            <dt>Angkatan</dt>
+            <dd data-result="angkatan"></dd>
+          </div>
+          <div>
+            <dt>Nomor HP</dt>
+            <dd data-result="no_hp"></dd>
+          </div>
+          <div>
+            <dt>Motivasi</dt>
+            <dd data-result="motivasi"></dd>
+          </div>
+        </dl>
+        <form method="dialog">
+          <button class="registration-submit dialog-close" type="submit">
+            Selesai
+          </button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>

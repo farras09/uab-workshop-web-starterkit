@@ -233,3 +233,237 @@ body {
     font-size: 1.25rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   10. REGISTRATION FORM
+   -------------------------------------------------------------------------- */
+.registration-page {
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+.registration-card {
+  padding: 40px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+}
+
+.registration-header {
+  margin-bottom: 32px;
+}
+
+.registration-eyebrow {
+  margin-bottom: 8px;
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.registration-header h1,
+.dialog-content h2 {
+  color: var(--text-main);
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.registration-intro,
+.result-intro {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+.registration-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 16px;
+}
+
+.form-field {
+  display: flex;
+  flex: 1 1 calc(50% - 16px);
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.form-field-full {
+  flex-basis: 100%;
+}
+
+.form-field label {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  color: var(--text-main);
+  font: inherit;
+  background-color: rgba(11, 19, 43, 0.65);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 3px solid var(--accent-glow);
+  border-color: var(--accent-primary);
+}
+
+.registration-submit {
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 12px 20px;
+  color: #0b132b;
+  font: inherit;
+  font-weight: 700;
+  background-color: var(--accent-primary);
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.registration-submit:hover {
+  background-color: #22d3ee;
+  transform: translateY(-1px);
+}
+
+.registration-submit:focus-visible {
+  outline: 3px solid var(--text-main);
+  outline-offset: 3px;
+}
+
+.registration-note {
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.registration-dialog {
+  width: min(100% - 32px, 560px);
+  max-width: none;
+  max-height: min(90vh, 760px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  color: var(--text-main);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.registration-dialog::backdrop {
+  background-color: rgba(3, 7, 18, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-content {
+  padding: 32px;
+}
+
+.result-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--success);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: rgba(16, 185, 129, 0.12);
+  border-radius: 50%;
+}
+
+.dialog-content h2 {
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.result-details > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.result-details dt {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.result-details dd {
+  max-width: 100%;
+  color: var(--text-main);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.dialog-close {
+  margin-top: 24px;
+}
+
+@media (max-width: 560px) {
+  .registration-page {
+    padding: 20px 12px;
+  }
+
+  .registration-card {
+    padding: 28px 20px;
+  }
+
+  .registration-header {
+    margin-bottom: 26px;
+  }
+
+  .form-field {
+    flex-basis: 100%;
+  }
+
+  .dialog-content {
+    padding: 26px 20px;
+  }
+}
